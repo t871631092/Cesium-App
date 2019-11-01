@@ -54,7 +54,8 @@
               {
               "input": "node_modules/cesium/Build/Cesium/Cesium.js"
             }
-          ]
+          ],
+          "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
