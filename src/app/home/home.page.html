@@ -1,14 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <div class="no-padding" style="height:100%" id="cesiumContainer"></div>
 </ion-content>
+<ion-footer class="background-black">
+  <ion-slides #slider pager="true" [options]="slideOpts" (ionSlideTap)="onclick()" (ionSlideTouchEnd)="onclick()">
+    <ion-slide *ngFor="let item of data" >
+        <ion-card class="width-full background-white">
+            <ion-card-header>
+              <ion-icon name="airplane" class="font-size-50"></ion-icon>
+            </ion-card-header>
+            <ion-card-content>
+                <h1>{{item.name}}</h1>
+            </ion-card-content>
+          </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-footer>
